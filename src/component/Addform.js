@@ -273,8 +273,8 @@ const Addform = (props) => {
               onChange={onChange}
               required
             />
-            <div className="feedback">{formError.userName}</div>
           </div>
+            <div className="feedback">{formError.userName}</div>
         </div>
 
         {/* city */}
