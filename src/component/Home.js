@@ -11,7 +11,7 @@ const Home = () => {
   const form = useSelector((state) => state.form);
   const [currentForm, setCurrentForm] = useState();
   const [editClick, setEditClick] = useState(false);
-  
+
   const addForm = () => {
     refAdd.current.click();
     setEditClick(false);
@@ -30,7 +30,6 @@ const Home = () => {
   const editClickReset = () => {
     setEditClick(false);
   };
-
 
   return (
     <div className="container">
@@ -61,13 +60,11 @@ const Home = () => {
             </div>
             <div className="modal-body">
               <div className="container">
-                <form className="row g-3 needs-validation" noValidate>
-                  <Addform
-                    editClick={editClick}
-                    editClickReset={editClickReset}
-                    currentForm={currentForm}
-                  />
-                </form>
+                <Addform
+                  editClick={editClick}
+                  editClickReset={editClickReset}
+                  currentForm={currentForm}
+                />
               </div>
             </div>
           </div>
