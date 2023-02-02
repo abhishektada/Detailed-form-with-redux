@@ -4,7 +4,7 @@ const Formitem = (props) => {
   const noData = "pending"
   const { form, handleEdit, handleDlt } = props;
   const { react, java, python, flask } = form.intrest; 
-  const { email,firstName,lastName,userName,contactNumber,city,state,pincode,dateOfBirth,gender } = form.details
+  const { email,firstName,lastName,userName,contactNumber,city,state,pincode,dateOfBirth,gender,country } = form.details
   const { id } = form
   function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -31,7 +31,7 @@ const Formitem = (props) => {
           </h5>
           <div className="col">
             <i
-              className="fa-solid fa-trash  fa-2x mx-2"
+              className="fa-solid fa-trash fa-2x mx-3"
               onClick={() => {
                 handleDlt(id);
               }}
@@ -68,11 +68,15 @@ const Formitem = (props) => {
           </p>
           <p className="card-text">
             <strong>City :- </strong>
-            {capitalize(city?city:noData)},
+            {capitalize(city?city:noData)}
           </p>
           <p className="card-text">
             <strong>State :- </strong>
-            {capitalize(state?state:noData)},
+            {capitalize(state?state:noData)}
+          </p>
+          <p className="card-text">
+            <strong>Country :- </strong>
+            {capitalize(country?country:noData)}
           </p>
           <p className="card-text">
             <strong>Pincode :- </strong>
